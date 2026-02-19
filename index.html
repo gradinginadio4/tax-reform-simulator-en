@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Reform Impact Simulation 2025-2026 | Homieux Media</title>
+    <meta name="description" content="Assess the impact of Belgian tax reforms 2025-2026 on your practice. Regulatory intelligence for accounting firms and tax advisors.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://homieuxmedia.com" target="_blank" rel="noopener noreferrer" class="logo-link">
+                <img src="logo-homieux.png" alt="Homieux Media - Strategic Advisory Firm" class="logo">
+            </a>
+            <nav class="language-nav" aria-label="Language selection">
+                <span class="current-lang">EN</span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Tax Reform Impact Simulation</h1>
+                <p class="hero-subtitle">Anticipate regulatory developments 2025-2026 and evaluate your strategic positioning against new Belgian fiscal obligations.</p>
+                <div class="disclaimer-box">
+                    <p><strong>Methodological note:</strong> This simulation is based on public regulatory information and firm-profile modeling. It does not use internal confidential data.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="simulation-container">
+            <div class="container">
+                <div class="progress-bar" aria-hidden="true">
+                    <div class="progress-step active" data-step="1">1</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="2">2</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="3">3</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="4">4</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="5">5</div>
+                </div>
+
+                <form id="simulationForm" class="simulation-form" novalidate>
+                    
+                    <fieldset class="form-step active" id="step1">
+                        <legend class="step-title">Client Portfolio Structure</legend>
+                        <p class="step-description">Indicate the approximate distribution of your client base.</p>
+                        
+                        <div class="input-group">
+                            <label for="smeClients" class="input-label">SMEs and Mid-Market <span class="percentage-display" id="smeDisplay">0%</span></label>
+                            <input type="range" id="smeClients" name="smeClients" min="0" max="100" value="0" class="range-input" required>
+                            <div class="range-labels"><span>0%</span><span>50%</span><span>100%</span></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="corporateClients" class="input-label">Large Corporations and Groups <span class="percentage-display" id="corporateDisplay">0%</span></label>
+                            <input type="range" id="corporateClients" name="corporateClients" min="0" max="100" value="0" class="range-input" required>
+                            <div class="range-labels"><span>0%</span><span>50%</span><span>100%</span></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="internationalClients" class="input-label">International Clients and Cross-Border Structures <span class="percentage-display" id="internationalDisplay">0%</span></label>
+                            <input type="range" id="internationalClients" name="internationalClients" min="0" max="100" value="0" class="range-input" required>
+                            <div class="range-labels"><span>0%</span><span>50%</span><span>100%</span></div>
+                        </div>
+
+                        <div class="validation-message" id="clientMixValidation">Total must equal 100%</div>
+
+                        <div class="button-group">
+                            <button type="button" class="btn btn-primary" id="toStep2" disabled>Continue</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-step" id="step2">
+                        <legend class="step-title">Service Specializations</legend>
+                        <p class="step-description">Select your firm's primary advisory domains affected by the reforms.</p>
+                        
+                        <div class="checkbox-grid">
+                            <div class="checkbox-card">
+                                <input type="checkbox" id="capitalGains" name="specialization" value="capitalGains">
+                                <label for="capitalGains">
+                                    <span class="checkbox-title">Capital Gains Advisory</span>
+                                    <span class="checkbox-desc">January 2026 reform impact</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-card">
+                                <input type="checkbox" id="exitTax" name="specialization" value="exitTax">
+                                <label for="exitTax">
+                                    <span class="checkbox-title">Exit Tax and Capital Mobility</span>
+                                    <span class="checkbox-desc">July 2025 implementation</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-card">
+                                <input type="checkbox" id="digitalInvoicing" name="specialization" value="digitalInvoicing">
+                                <label for="digitalInvoicing">
+                                    <span class="checkbox-title">Digital Invoicing Advisory</span>
+                                    <span class="checkbox-desc">Mandatory B2B legal requirement</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-card">
+                                <input type="checkbox" id="crossBorder" name="specialization" value="crossBorder">
+                                <label for="crossBorder">
+                                    <span class="checkbox-title">Cross-Border Taxation</span>
+                                    <span class="checkbox-desc">DAC7 directive, automatic exchanges</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" id="backToStep1">Back</button>
+                            <button type="button" class="btn btn-primary" id="toStep3">Continue</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-step" id="step3">
+                        <legend class="step-title">Digital Maturity Assessment</legend>
+                        <p class="step-description">Evaluate your current digital infrastructure and operational capabilities.</p>
+                        
+                        <div class="radio-group">
+                            <div class="radio-card">
+                                <input type="radio" id="portalYes" name="clientPortal" value="true" required>
+                                <label for="portalYes">
+                                    <span class="radio-title">Secure Client Portal</span>
+                                    <span class="radio-desc">Encrypted document exchange operational</span>
+                                </label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="portalNo" name="clientPortal" value="false" required>
+                                <label for="portalNo">
+                                    <span class="radio-title">No Dedicated Portal</span>
+                                    <span class="radio-desc">Exchange via email or paper-based</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="checkbox-grid single-column">
+                            <div class="checkbox-card">
+                                <input type="checkbox" id="eInvoicingCapable" name="digitalCapabilities" value="eInvoicingCapable">
+                                <label for="eInvoicingCapable">
+                                    <span class="checkbox-title">Peppol E-Invoicing Capability</span>
+                                    <span class="checkbox-desc">Operational connection to federal platform</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-card">
+                                <input type="checkbox" id="timeTrackingSoftware" name="digitalCapabilities" value="timeTrackingSoftware">
+                                <label for="timeTrackingSoftware">
+                                    <span class="checkbox-title">Compliant Time-Tracking Software</span>
+                                    <span class="checkbox-desc">Royal Decree 12 May 2023 (Art. 4, §3)</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-card">
+                                <input type="checkbox" id="automationTools" name="digitalCapabilities" value="automationTools">
+                                <label for="automationTools">
+                                    <span class="checkbox-title">Document Automation Tools</span>
+                                    <span class="radio-desc">Automated workflows, report generation</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" id="backToStep2">Back</button>
+                            <button type="button" class="btn btn-primary" id="toStep4">Continue</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-step" id="step4">
+                        <legend class="step-title">Geographic Exposure</legend>
+                        <p class="step-description">Define the geographic scope of your advisory activities.</p>
+                        
+                        <div class="radio-group">
+                            <div class="radio-card">
+                                <input type="radio" id="belgiumOnly" name="geographicScope" value="belgiumOnly" required>
+                                <label for="belgiumOnly">
+                                    <span class="radio-title">Belgium Only</span>
+                                    <span class="radio-desc">National and regional tax advisory</span>
+                                </label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="crossBorderEU" name="geographicScope" value="crossBorderEU" required>
+                                <label for="crossBorderEU">
+                                    <span class="radio-title">Belgium + European Union</span>
+                                    <span class="radio-desc">ATAD directive, DAC7, automatic exchanges</span>
+                                </label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="globalScope" name="geographicScope" value="globalScope" required>
+                                <label for="globalScope">
+                                    <span class="radio-title">Global International</span>
+                                    <span class="radio-desc">OECD, BEPS 2.0, third jurisdictions</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" id="backToStep3">Back</button>
+                            <button type="button" class="btn btn-primary" id="calculateResults">Calculate Impact</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-step" id="step5">
+                        <legend class="step-title">Simulation Results</legend>
+                        
+                        <div class="results-container">
+                            <div class="score-section">
+                                <div class="score-circle" id="disruptionScore">
+                                    <span class="score-value">--</span>
+                                    <span class="score-label">Disruption Index</span>
+                                </div>
+                                <div class="score-interpretation" id="scoreInterpretation"></div>
+                            </div>
+
+                            <div class="analysis-grid">
+                                <div class="analysis-card">
+                                    <h3>Regulatory Risk Mapping</h3>
+                                    <div id="riskBreakdown" class="risk-list"></div>
+                                </div>
+
+                                <div class="analysis-card">
+                                    <h3>Automation Opportunity Matrix</h3>
+                                    <div id="automationMatrix" class="opportunity-list"></div>
+                                </div>
+
+                                <div class="analysis-card full-width">
+                                    <h3>Competitive Positioning Analysis</h3>
+                                    <p class="methodology-note">Public signal-based estimation model (technology partnerships, regulatory communications, hiring signals).</p>
+                                    <div id="peerHeatmap" class="heatmap-container"></div>
+                                </div>
+
+                                <div class="analysis-card full-width">
+                                    <h3>Compliance Implementation Blueprint</h3>
+                                    <div id="complianceBlueprint" class="blueprint-list"></div>
+                                </div>
+                            </div>
+
+                            <div class="cta-section">
+                                <h3>Strategic Assessment of Your Position</h3>
+                                <p>Obtain an in-depth evaluation of your reform exposure and a prioritized 90-day action roadmap.</p>
+                                <a href="https://cal.com/homieux-media/strategic-discovery-call-let-s-discuss-your-business-challenges" target="_blank" rel="noopener noreferrer" class="btn btn-cta">
+                                    Book a 15-Minute Discovery Call
+                                </a>
+                                <p class="cta-note">No commitment. Confidential assessment.</p>
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" id="restartSimulation">New Simulation</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo-homieux.png" alt="Homieux Media" class="footer-logo">
+                    <p>Regulatory intelligence and digital strategy for accounting firms and tax advisory practices.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="https://www.homieuxmedia.com/en/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+                            <li><a href="https://www.homieuxmedia.com/en/terms-of-use" target="_blank" rel="noopener noreferrer">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="https://homieuxmedia.com" target="_blank" rel="noopener noreferrer">homieuxmedia.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Homieux Media. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
